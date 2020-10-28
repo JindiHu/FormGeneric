@@ -4,7 +4,7 @@ import Field from './components/Field'
 import FieldGroup from './components/FieldGroup'
 import SubmitButton from './components/SubmitButton'
 import './App.css'
-
+// App that demostrates how Form components works
 function App() {
   const selectOptions = [
     { value: 1, label: 'First' },

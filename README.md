@@ -4,7 +4,63 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation & Run
 
-Running some steps and some screenshots and guide
+### Run `npm install` to install dependencies
+
+### Run `npm start` to see the project
+
+### <Form /> description:
+
+```js
+// Expect to receive onSubmitForm callback to return the state of the form
+// Is resposible for the state management and provide the context for the <Field />
+<Form onSubmitForm={onSubmit}>
+```
+
+### <Field /> description:
+
+```js
+// Is resposible for the rendering specific field and update the Form
+<Field type="text" fieldName="text" validationRule={'[A-Za-z]{3}'} />
+<Field type="text" fieldName="text2" />
+<FieldGroup>
+  <Field type="radio" fieldName="Weirdo1" name={'weirdo'} label={'Weirdo1'} />
+  <Field type="radio" fieldName="Weirdo2" name={'weirdo'} label={'Weirdo2'} />
+  <Field type="radio" fieldName="Weirdo3" name={'weirdo'} label={'Weirdo3'} />
+</FieldGroup>
+<Field type="checkbox" fieldName="checkbox" label={'Weirdo'} />
+<Field type="select" fieldName="select" options={selectOptions} />
+<Field type="textarea" fieldName="textarea" />
+```
+
+Props for the <Field />:
+
+- _type_:
+
+  - `text` / `radio` / `checkbox` will create <input type={type}>,
+  - `select` will create <select options={options}>,
+  - `textarea` will create <textarea />
+
+- _fieldName_: will create a separate property in the state that would be returned `onSubmit`
+- _validationRule?_: optional field, that si validating text inputs only (WIP)
+- _options?_: optional field, that expect to receive { value, field } options array for select
+- _name?_: optional field for input name
+- _label?_: optional field for label
+- _id?_: optional field for id
+
+### <FieldGroup /> description:
+
+```js
+// Expect to receive isColumn optional property that use flex-direction: column to the parent
+<FieldGroup isColumn={'true'}>
+```
+
+### Field types:
+
+- _TextField_: <input type="text" />
+- _CheckboxField_: <input type="checkbox" />
+- _RadioField_: <input type="radio" />
+- _SelectField_:<select><option></option></select>
+- _TextAreaField_: <textarea>
 
 ## Available Scripts (Default)
 

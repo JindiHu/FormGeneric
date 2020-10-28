@@ -42,7 +42,12 @@ export type FielTextareaProps = {
   name?: string,
   placeholder?: string,
 }
-
+/**
+ * Field is responsible for rendering proper type of the field and 
+ * have a connection to the Context itself
+ * WIP: Validation
+ * @param fieldName, label, type, options, id, name, validationRule - Props 
+ */
 const Field = ({ fieldName, label, type, options, id, name, validationRule }: Props) => {
   const { state, setState, onFieldChange } = useContext(FormContext)
   const fieldValue = state ? state[fieldName] : ''

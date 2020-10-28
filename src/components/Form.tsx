@@ -18,7 +18,7 @@ export const FormContext = createContext<State>({
   onFieldChange: () => {},
   onSubmit: (state: { [key: string]: any, errors: {} }) => state,
 })
-
+// Form is creating context for all Fields and regualte the state
 const Form = ({ onSubmitForm, children }: FormProps) => {
   const [state, setState] = useState({ errors: {} })
 
@@ -40,15 +40,6 @@ const Form = ({ onSubmitForm, children }: FormProps) => {
     <FormContext.Provider value={{ state, setState, onFieldChange, onSubmit }}>
       <form onSubmit={onSubmit}>
         {children}
-
-        {/* {state.errors && Object.keys(state.errors).map((field: string) => {
-          // const err = state.errors[field] as any
-          console.log(err)
-          // return state.errors[field] && 
-          //   <p key={state.errors[field]} style={{ color: 'red' }}>
-          //     {state.errors[field]}
-          //   </p>
-        })} */}
       </form>
     </FormContext.Provider>
   );
