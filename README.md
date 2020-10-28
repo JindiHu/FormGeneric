@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Run `npm start` to see the project
 
-### <Form /> description:
+### `<Form />` description:
 
 ```js
 // Expect to receive onSubmitForm callback to return the state of the form
@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <Form onSubmitForm={onSubmit}>
 ```
 
-### <Field /> description:
+### `<Field />` description:
 
 ```js
 // Is resposible for the rendering specific field and update the Form
@@ -32,13 +32,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <Field type="textarea" fieldName="textarea" />
 ```
 
-Props for the <Field />:
+Props for the `<Field />`:
 
 - _type_:
 
-  - `text` / `radio` / `checkbox` will create <input type={type}>,
-  - `select` will create <select options={options}>,
-  - `textarea` will create <textarea />
+  - `text` / `radio` / `checkbox` will create `<input type={type}>`,
+  - `select` will create `<select options={options}>`,
+  - `textarea` will create `<textarea />`
 
 - _fieldName_: will create a separate property in the state that would be returned `onSubmit`
 - _validationRule?_: optional field, that si validating text inputs only (WIP)
@@ -56,11 +56,11 @@ Props for the <Field />:
 
 ### Field types:
 
-- _TextField_: <input type="text" />
-- _CheckboxField_: <input type="checkbox" />
-- _RadioField_: <input type="radio" />
-- _SelectField_:<select><option></option></select>
-- _TextAreaField_: <textarea>
+- _TextField_: `<input type="text" />`
+- _CheckboxField_:` <input type="checkbox" />`
+- _RadioField_: `<input type="radio" />`
+- _SelectField_: `<select><option></option></select>`
+- _TextAreaField_: `<textarea>`
 
 ## Available Scripts (Default)
 
