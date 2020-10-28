@@ -47,7 +47,7 @@ Props for the `<Field />`:
 - _label?_: optional field for label
 - _id?_: optional field for id
 
-### <FieldGroup /> description:
+### `<FieldGroup />` description:
 
 ```js
 // Expect to receive isColumn optional property that use flex-direction: column to the parent
